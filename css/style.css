@@ -899,98 +899,54 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Speakers Section
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+
 #speakers {
-  padding: 60px 0 30px 0;
-}
-
-#speakers .speaker {
-  position: relative;
+  padding: 60px;
   overflow: hidden;
-  margin-bottom: 30px;
 }
 
-#speakers .speaker .details {
-  background: rgba(6, 12, 34, 0.76);
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-  right: 0;
+#speakers .owl-nav,
+#speakers .owl-dots {
+  margin-top: 25px;
   text-align: center;
-  padding-top: 10px;
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#speakers .speaker .details h3 {
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
+#speakers .owl-item {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 
-#speakers .speaker .details p {
-  color: #fff;
-  font-size: 15px;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-
-#speakers .speaker .details .social {
-  height: 30px;
-}
-
-#speakers .speaker .details a {
-  color: #fff;
-}
-
-#speakers .speaker .details a:hover {
-  color: #c31e33;
-}
-
-#speakers .speaker:hover .details {
-  bottom: 0;
-}
-
-#speakers-details {
-  padding: 60px 0;
-}
-
-#speakers-details .details h2 {
-  color: #0061a9;
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-#speakers-details .details .social {
-  margin-bottom: 15px;
-}
-
-#speakers-details .details .social a {
-  background: #e9edfb;
-  color: #0061a9;
-  line-height: 1;
+#speakers .owl-dot {
   display: inline-block;
-  text-align: center;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  padding-top: 9px;
+  background-color: #ddd;
 }
 
-#speakers-details .details .social a:hover {
-  background: #c31e33;
-  color: #fff;
+#speakers .owl-dot.active {
+  background-color: #c31e33;
 }
 
-#speakers-details .details .social a i {
-  font-size: 18px;
+#speakers .speakers-carousel .owl-stage-outer {
+  overflow: visible;
 }
 
-#speakers-details .details p {
-  color: #0061a9;
-  font-size: 15px;
-  margin-bottom: 10px;
+#speakers .speakers-carousel .center {
+  border: 6px solid #c31e33;
+  margin: -10px;
+  box-sizing: content-box;
+  padding: 4px;
+  background: #fff;
+  z-index: 1;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Schedule Section

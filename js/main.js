@@ -175,7 +175,7 @@ jQuery(document).ready(function( $ ) {
   }
 
   // Set the end date for the countdown
-  const eventDate = new Date('April 27, 2025 10:00:00').getTime();
+  const eventDate = new Date('April 27, 2026 10:00:00').getTime();
   startTimer(eventDate);
 
 

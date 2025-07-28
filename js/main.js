@@ -134,6 +134,23 @@ jQuery(document).ready(function( $ ) {
     }
   });
 
+  // Exhibitors carousel (uses the Owl Carousel library)
+  $(".exhibitors-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    center: true,
+    margin: 20,
+    nav: false,
+    responsive: { 
+      0: { items: 1 }, 
+      576: { items: 2 }, 
+      768: { items: 3 }, 
+      992: { items: 4 }, 
+      1200: { items: 5 }
+    }
+  });
+
   // Buy tickets select the ticket type on click
   $('#buy-ticket-modal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget);

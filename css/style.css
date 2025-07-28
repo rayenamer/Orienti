@@ -1216,24 +1216,95 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 4px;
   background: #fff;
   z-index: 1;
+  border-radius: 12px;
 }
 
-/*--------------------------------------------------------------
-# supporters Section
---------------------------------------------------------------*/
+/* Exhibitors Carousel - Scrollable with same styling as sponsors */
+#gallery .exhibitors-carousel {
+  margin: 40px 0;
+  padding: 20px 0;
+}
 
-#supporters {
+#gallery .exhibitors-carousel .supporter-logo {
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e0e5fa;
+  border-radius: 12px;
+  height: 200px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#gallery .exhibitors-carousel .supporter-logo:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#gallery .exhibitors-carousel .supporter-logo:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+#gallery .exhibitors-carousel img {
+  transition: all 0.4s ease-in-out;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  filter: grayscale(30%);
+}
+
+#gallery .exhibitors-carousel img:hover {
+  filter: grayscale(0%);
+}
+
+#gallery .exhibitors-carousel .owl-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 10px 0;
+}
+
+#gallery .exhibitors-carousel .center .supporter-logo {
+  border: 4px solid #c31e33;
+  margin: -8px 10px;
+  box-sizing: content-box;
+  padding: 36px 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  z-index: 2;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(195, 30, 51, 0.2);
+  transform: scale(1.05);
+}
+
+#gallery .exhibitors-carousel .center img {
+  filter: grayscale(0%);
+}
+
+/* Exhibitors Section - Same styling as sponsors but without gold branding */
+#gallery .exhibitors-section {
   padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
-#supporters .supporters-wrap {
+#gallery .exhibitors-section .supporters-wrap {
   border-top: 1px solid #e0e5fa;
   border-left: 1px solid #e0e5fa;
   margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-#supporters .supporter-logo {
-  padding: 30px;
+#gallery .exhibitors-section .supporter-logo {
+  padding: 40px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1246,17 +1317,124 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-right: 1px solid #e0e5fa;
   border-bottom: 1px solid #e0e5fa;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.5);
-  height: 160px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  height: 200px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#gallery .exhibitors-section .supporter-logo:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#gallery .exhibitors-section .supporter-logo:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+#gallery .exhibitors-section img {
+  transition: all 0.4s ease-in-out;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  filter: grayscale(30%);
+}
+
+#gallery .exhibitors-section img:hover {
+  filter: grayscale(0%);
+}
+
+
+
+
+/*--------------------------------------------------------------
+# supporters Section
+--------------------------------------------------------------*/
+
+#supporters {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+#supporters .supporters-wrap {
+  border-top: 1px solid #e0e5fa;
+  border-left: 1px solid #e0e5fa;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#supporters .supporter-logo {
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  height: 200px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#supporters .supporter-logo:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 #supporters .supporter-logo:hover img {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 #supporters img {
   transition: all 0.4s ease-in-out;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  filter: grayscale(30%);
+}
+
+#supporters img:hover {
+  filter: grayscale(0%);
+}
+
+/* Gold sponsor special styling */
+#supporters .supporter-logo::before {
+  content: '★';
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffd700;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+#supporters .supporter-logo::after {
+  content: 'GOLD SPONSOR';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffd700;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0.7;
 }
 
 /*--------------------------------------------------------------
@@ -1815,5 +1993,319 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 460px) {
   #subscribe button {
     margin-top: 10px;
+  }
+}
+
+/* Collaborate Section - Modern Redesign with Website Theme */
+#collaborate {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #c31e33 0%, #8b1538 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#collaborate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+#collaborate .section-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#collaborate .section-header h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+#collaborate .section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa);
+  border-radius: 2px;
+}
+
+#collaborate .collaborate-text {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#collaborate .collaborate-text::before {
+  content: '💼';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ffffff, #f8f9fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#collaborate .collaborate-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa, #e0e5fa);
+  border-radius: 0 0 20px 20px;
+}
+
+/* Floating elements for visual interest */
+#collaborate .floating-element {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+#collaborate .floating-element:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+#collaborate .floating-element:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+#collaborate .floating-element:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #collaborate {
+    padding: 80px 0;
+  }
+  
+  #collaborate .section-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  #collaborate .collaborate-text {
+    font-size: 1.1rem;
+    padding: 40px 30px;
+    margin: 0 20px;
+  }
+  
+  #collaborate .collaborate-text::before {
+    font-size: 2rem;
+    top: -15px;
+    left: 20px;
+  }
+}
+
+/* Book Stand Section - Modern Design with Website Theme */
+#book-stand {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #c31e33 0%, #8b1538 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#book-stand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+#book-stand .section-header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+#book-stand .section-header h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+#book-stand .section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa);
+  border-radius: 2px;
+}
+
+#book-stand .book-stand-content {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 40px;
+}
+
+#book-stand .book-stand-content::before {
+  content: '🏢';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #ffffff, #f8f9fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#book-stand .book-stand-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa, #e0e5fa);
+  border-radius: 0 0 20px 20px;
+}
+
+#book-stand .book-stand-text {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+
+#book-stand .book-stand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(45deg, #ffffff, #f8f9fa);
+  color: #c31e33;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 18px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+#book-stand .book-stand-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+#book-stand .book-stand-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  color: #8b1538;
+}
+
+#book-stand .book-stand-button:hover::before {
+  left: 100%;
+}
+
+#book-stand .book-stand-button i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+#book-stand .book-stand-button:hover i {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #book-stand {
+    padding: 80px 0;
+  }
+  
+  #book-stand .section-header h2 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  #book-stand .book-stand-content {
+    padding: 40px 30px;
+    margin: 0 20px;
+  }
+  
+  #book-stand .book-stand-text {
+    font-size: 1.1rem;
+  }
+  
+  #book-stand .book-stand-button {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+  }
+  
+  #book-stand .book-stand-content::before {
+    font-size: 2rem;
+    top: -15px;
+    left: 20px;
   }
 }
